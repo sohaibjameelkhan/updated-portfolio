@@ -1,0 +1,93 @@
+Build a visually stunning, fully static portfolio website using Next.js (App Router), Tailwind CSS, Anime.js, Framer Motion, and React Three Fiber.
+
+All content must be static — no backend, no API calls, no CMS. All assets (images, GIFs, SVGs) must be stored locally within the project. The website must be fully exportable using next export for hosting on GitHub Pages or Vercel.
+
+🛠 Technologies Required:
+Next.js (App Router)
+
+Tailwind CSS
+
+Anime.js for smooth text and SVG animations
+
+Framer Motion for page transitions and layout effects
+
+React Three Fiber (or Three.js) for 3D backgrounds and interactive visuals
+
+No backend, No external database, No dynamic routing
+
+🎨 Design Requirements:
+Animated hero section with 3D background (e.g., rotating shapes, particles)
+
+Typewriter/letter-by-letter introduction animation via Anime.js
+
+Scroll-based animations (fade-ins, parallax, scale) on each section
+
+Fully responsive design using Tailwind
+
+Smooth transitions between sections and pages using Framer Motion
+
+Include:
+
+GIFs, custom SVGs, high-quality profile image (provided)
+
+Section for: About Me, Skills, Projects, Experience, Education, Contact
+
+SEO optimized using <head> via next/head
+
+📄 Content (from CV):
+Name: Muhammad Sohaib Jameel
+Title: Senior Mobile Application Developer
+Email: sohaibjameel3@gmail.com
+Phone: +92 3115244602
+Location: Islamabad, Punjab, Pakistan
+LinkedIn: https://linkedin.com/in/sohaibjameel
+GitHub: https://github.com/sohaibjameelkhan
+Resume: Download CV (add a button)
+
+🧠 Skills:
+Flutter, Dart, Kotlin, Swift, Firebase, GitHub, REST APIs, Xcode, Android Studio, SQLite, WebRTC, Jetpack, Stripe, AWS, Figma, Multi-language support
+
+🧪 Experience:
+SoftLinks FZCO – Led 6+ apps, 50K+ users, 30% faster delivery
+
+Techozon Software House – Built 4+ Flutter apps, 25% user retention boost
+
+Infusible Coders – Optimized legacy apps by 35%
+
+Freelancer on Fiverr – 20+ mobile projects, 90% 5-star rating
+
+🎓 Education:
+BS Computer Science – KUST University
+
+ICS – Punjab Group of Colleges
+
+🚀 Projects Section (Include Play Store and App Store Buttons):
+ICD Happiness Club
+Social + e-commerce app with real-time chat and offers
+
+Play Store
+
+Apple Store
+
+Racing Eye
+Horse racing app with live tracking
+
+Play Store
+
+Apple Store
+
+Clinic On App
+Doctor booking and appointment app
+
+Play Store
+
+Apple Store
+
+📁 Other Requirements:
+Add a Download CV button (PDF provided)
+
+Include locally stored profile image (provided as IMG_5708.PNG)
+
+Use reusable React components for each section
+
+Entire site must work perfectly after next export
