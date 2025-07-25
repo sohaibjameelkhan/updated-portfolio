@@ -26,17 +26,41 @@ export default function SkillsSection() {
         </div>
         
         {/* Horizontal scrolling skills container */}
-        <div className="overflow-hidden relative">
-          <div className="flex animate-scroll-left space-x-8 whitespace-nowrap">
-            {duplicatedSkills.map((skill, index) => (
-              <div key={index} className="skill-card glass-effect p-6 rounded-xl text-center transition-all duration-300 hover:scale-105 flex-shrink-0 w-56">
-                <div className={`text-4xl mb-4 ${skill.color}`}>
-                  <i className={skill.icon}></i>
+        <div className="relative">
+          <div 
+            className="overflow-x-auto scrollbar-hide group"
+            onMouseEnter={(e) => {
+              const scrollContainer = e.currentTarget.querySelector('.animate-scroll-left');
+              if (scrollContainer) {
+                (scrollContainer as HTMLElement).style.animationPlayState = 'paused';
+              }
+            }}
+            onMouseLeave={(e) => {
+              const scrollContainer = e.currentTarget.querySelector('.animate-scroll-left');
+              if (scrollContainer) {
+                (scrollContainer as HTMLElement).style.animationPlayState = 'running';
+              }
+            }}
+          >
+            <div className="flex animate-scroll-left space-x-8 whitespace-nowrap pb-4" style={{ width: 'max-content' }}>
+              {duplicatedSkills.map((skill, index) => (
+                <div key={index} className="skill-card glass-effect p-6 rounded-xl text-center transition-all duration-300 hover:scale-105 flex-shrink-0 w-56">
+                  <div className={`text-4xl mb-4 ${skill.color}`}>
+                    {skill.icon === 'fab fa-flutter' ? (
+                      <div className="text-blue-400">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M14.314 0L7.75 6.564l9.314 9.314 3.564-3.564L14.314 0zM7.75 6.564L1.186 0H7.75v6.564zM17.878 15.878l-3.564 3.564 6.564 6.564h-6.564l-9.314-9.314L7.75 13.94l6.564 6.564h3.564v-4.626z"/>
+                        </svg>
+                      </div>
+                    ) : (
+                      <i className={skill.icon}></i>
+                    )}
+                  </div>
+                  <h3 className="font-semibold mb-2">{skill.name}</h3>
+                  <p className="text-sm text-slate-400">{skill.description}</p>
                 </div>
-                <h3 className="font-semibold mb-2">{skill.name}</h3>
-                <p className="text-sm text-slate-400">{skill.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

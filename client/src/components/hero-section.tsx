@@ -61,7 +61,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center hero-pattern section">
+    <section id="home" className="relative min-h-screen flex items-center justify-center hero-pattern section pt-20">
       {/* 3D Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating geometric shapes */}
