@@ -8,9 +8,9 @@ export default function ProjectsSection() {
       bgGradient: "bg-gradient-to-br from-blue-500 to-purple-600",
       titleColor: "text-blue-400",
       tags: [
-        { name: "Flutter", color: "bg-blue-500/20 text-blue-300" },
-        { name: "Firebase", color: "bg-green-500/20 text-green-300" },
-        { name: "Real-time Chat", color: "bg-purple-500/20 text-purple-300" }
+        { name: "Flutter", color: "bg-blue-500/20 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-700" },
+        { name: "Firebase", color: "bg-orange-500/20 text-orange-600 dark:text-orange-300 border border-orange-200 dark:border-orange-700" },
+        { name: "Real-time Chat", color: "bg-purple-500/20 text-purple-600 dark:text-purple-300 border border-purple-200 dark:border-purple-700" }
       ],
       playStoreUrl: "https://play.google.com/store/apps/details?id=com.icd.hc&hl=en",
       appStoreUrl: "https://apps.apple.com/ae/app/icd-happiness-club/id1250013777"
@@ -23,9 +23,9 @@ export default function ProjectsSection() {
       bgGradient: "bg-gradient-to-br from-orange-500 to-red-600",
       titleColor: "text-orange-400",
       tags: [
-        { name: "Flutter", color: "bg-blue-500/20 text-blue-300" },
-        { name: "Live Tracking", color: "bg-orange-500/20 text-orange-300" },
-        { name: "Real-time", color: "bg-red-500/20 text-red-300" }
+        { name: "Flutter", color: "bg-blue-500/20 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-700" },
+        { name: "Live Tracking", color: "bg-orange-500/20 text-orange-600 dark:text-orange-300 border border-orange-200 dark:border-orange-700" },
+        { name: "Real-time", color: "bg-red-500/20 text-red-600 dark:text-red-300 border border-red-200 dark:border-red-700" }
       ],
       playStoreUrl: "https://play.google.com/store/apps/details?id=com.racingeyenew.re&hl=en",
       appStoreUrl: "https://apps.apple.com/pk/app/racing-eye/id1493939462"
@@ -38,9 +38,9 @@ export default function ProjectsSection() {
       bgGradient: "bg-gradient-to-br from-teal-500 to-cyan-600",
       titleColor: "text-teal-400",
       tags: [
-        { name: "Flutter", color: "bg-blue-500/20 text-blue-300" },
-        { name: "Healthcare", color: "bg-teal-500/20 text-teal-300" },
-        { name: "Booking System", color: "bg-cyan-500/20 text-cyan-300" }
+        { name: "Flutter", color: "bg-blue-500/20 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-700" },
+        { name: "Healthcare", color: "bg-teal-500/20 text-teal-600 dark:text-teal-300 border border-teal-200 dark:border-teal-700" },
+        { name: "Booking System", color: "bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-700" }
       ],
       playStoreUrl: "https://play.google.com/store/apps/details?id=com.clinicOnApp&hl=en",
       appStoreUrl: "https://apps.apple.com/pk/app/cliniconapp/id6475239790"
@@ -48,17 +48,17 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-slate-800/50 section">
+    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 section">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">Here are some of the mobile applications I've built that are live on app stores and serving thousands of users.</p>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Here are some of the mobile applications I've built that are live on app stores and serving thousands of users.</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="project-card glass-effect p-6 rounded-xl transition-all duration-300">
+            <div key={index} className="project-card glass-effect p-6 rounded-xl transition-all duration-300 bg-white/90 dark:bg-background/80 backdrop-blur-sm shadow-lg dark:shadow-none border border-white/50 dark:border-transparent">
               <div className={`mb-6 h-48 ${project.bgGradient} rounded-lg flex items-center justify-center`}>
                 <div className="text-center text-white">
                   <i className={`${project.icon} ${project.iconColor}`}></i>
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
               </div>
               
               <h3 className={`text-xl font-semibold mb-3 ${project.titleColor}`}>{project.title}</h3>
-              <p className="text-slate-300 mb-4 text-sm">
+              <p className="text-muted-foreground mb-4 text-sm">
                 {project.description}
               </p>
               

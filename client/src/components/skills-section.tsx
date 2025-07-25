@@ -18,7 +18,7 @@ export default function SkillsSection() {
   const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <section id="skills" className="py-20 bg-slate-900 section">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 section">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills & Technologies</h2>
@@ -44,7 +44,7 @@ export default function SkillsSection() {
           >
             <div className="flex animate-scroll-left space-x-8 whitespace-nowrap pb-4" style={{ width: 'max-content' }}>
               {duplicatedSkills.map((skill, index) => (
-                <div key={index} className="skill-card glass-effect p-6 rounded-xl text-center transition-all duration-300 hover:scale-105 flex-shrink-0 w-56">
+                <div key={index} className="skill-card glass-effect p-6 rounded-xl text-center transition-all duration-300 hover:scale-105 flex-shrink-0 w-56 bg-white/90 dark:bg-background/80 backdrop-blur-sm shadow-lg dark:shadow-none border border-white/50 dark:border-transparent">
                   <div className={`text-4xl mb-4 ${skill.color}`}>
                     {skill.icon === 'fab fa-flutter' ? (
                       <div className="flex justify-center">
@@ -59,7 +59,7 @@ export default function SkillsSection() {
                     )}
                   </div>
                   <h3 className="font-semibold mb-2">{skill.name}</h3>
-                  <p className="text-sm text-slate-400">{skill.description}</p>
+                  <p className="text-sm text-muted-foreground">{skill.description}</p>
                 </div>
               ))}
             </div>

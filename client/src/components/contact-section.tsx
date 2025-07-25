@@ -11,12 +11,12 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-800/50 section">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 section">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">Ready to bring your mobile app ideas to life? Let's discuss your project and create something amazing together.</p>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Ready to bring your mobile app ideas to life? Let's discuss your project and create something amazing together.</p>
         </div>
         
         <div className="max-w-4xl mx-auto">
@@ -28,7 +28,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-blue-400">Email</h4>
-                  <p className="text-slate-300">sohaibjameel3@gmail.com</p>
+                  <p className="text-muted-foreground">sohaibjameel3@gmail.com</p>
                 </div>
               </div>
               
@@ -38,7 +38,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-400">Phone</h4>
-                  <p className="text-slate-300">+92 3115244602</p>
+                  <p className="text-muted-foreground">+92 3115244602</p>
                 </div>
               </div>
               
@@ -48,7 +48,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-green-400">WhatsApp</h4>
-                  <p className="text-slate-300">+92 3485149386</p>
+                  <p className="text-muted-foreground">+92 3485149386</p>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-cyan-400">Location</h4>
-                  <p className="text-slate-300">Islamabad, Punjab, Pakistan</p>
+                  <p className="text-muted-foreground">Islamabad, Punjab, Pakistan</p>
                 </div>
               </div>
               

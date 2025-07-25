@@ -8,7 +8,7 @@ import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
-    <div className="bg-slate-900 text-slate-50 overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Navigation />
       <main>
         <HeroSection />
@@ -18,9 +18,9 @@ export default function Home() {
         <ExperienceSection />
         <ContactSection />
       </main>
-      <footer className="bg-slate-900 py-8 border-t border-slate-800">
+      <footer className="bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 py-8 border-t border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-slate-400">
+          <p className="text-muted-foreground">
             © 2024 Muhammad Sohaib Jameel. Crafted with passion for mobile development.
           </p>
         </div>

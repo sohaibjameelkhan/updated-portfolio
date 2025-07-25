@@ -61,21 +61,21 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center hero-pattern section pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 section pt-20">
       {/* 3D Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-blue-500 transform rotate-45 animate-float opacity-20"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 border-2 border-blue-500 transform rotate-45 animate-float opacity-10 dark:opacity-20"></div>
         <div 
-          className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 transform rotate-12 animate-float opacity-30"
+          className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 transform rotate-12 animate-float opacity-15 dark:opacity-30"
           style={{ animationDelay: '-2s' }}
         ></div>
         <div 
-          className="absolute bottom-40 left-20 w-12 h-12 border-2 border-cyan-400 rounded-full animate-float opacity-25"
+          className="absolute bottom-40 left-20 w-12 h-12 border-2 border-cyan-400 rounded-full animate-float opacity-10 dark:opacity-25"
           style={{ animationDelay: '-4s' }}
         ></div>
         <div 
-          className="absolute bottom-20 right-40 w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 transform rotate-45 animate-float opacity-20"
+          className="absolute bottom-20 right-40 w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 transform rotate-45 animate-float opacity-15 dark:opacity-20"
           style={{ animationDelay: '-1s' }}
         ></div>
         
@@ -113,15 +113,15 @@ export default function HeroSection() {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          <span className="text-white">Hi, I'm </span>
+          <span className="text-foreground">Hi, I'm </span>
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Sohaib</span>
         </h1>
         
-        <div className="text-xl md:text-2xl text-slate-300 mb-8 h-16">
+        <div className="text-xl md:text-2xl text-muted-foreground mb-8 h-16">
           <span className="typing-cursor">{currentSubtitle}</span>
         </div>
         
-        <p className="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
           Senior Mobile Application Developer with 4+ years of experience crafting high-performance iOS and Android applications using Flutter, Dart, Kotlin, and Swift.
         </p>
         
@@ -134,7 +134,7 @@ export default function HeroSection() {
           </button>
           <button 
             onClick={() => scrollToSection('projects')}
-            className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-blue-500 hover:text-white"
+            className="bg-white/90 dark:bg-slate-800/50 border-2 border-blue-500 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-blue-500 hover:text-white shadow-lg backdrop-blur-sm"
           >
             View My Work
           </button>
