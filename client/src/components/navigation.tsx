@@ -1,7 +1,26 @@
 import { useState, useEffect } from "react";
+import { Switch } from "@/components/ui/switch";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("home");
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
 
   useEffect(() => {
     const updateActiveNav = () => {
@@ -60,6 +79,11 @@ export default function Navigation() {
                 {label}
               </button>
             ))}
+          </div>
+          <div className="flex items-center ml-4">
+            <span className="mr-2 text-xs text-slate-400">🌞</span>
+            <Switch checked={isDark} onCheckedChange={setIsDark} />
+            <span className="ml-2 text-xs text-slate-400">🌙</span>
           </div>
           <button className="md:hidden text-white">
             <i className="fas fa-bars"></i>

@@ -8,7 +8,7 @@ import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
-    <div className="bg-slate-900 text-slate-50 overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Navigation />
       <main>
         <HeroSection />
